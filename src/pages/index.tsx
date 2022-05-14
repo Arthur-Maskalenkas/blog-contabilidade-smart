@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
+import styles from '../styles/teste.module.scss'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <main>hello wolrd</main>
+      <main className={styles.title}>hello wolrd</main>
     </div>
   )
 }
