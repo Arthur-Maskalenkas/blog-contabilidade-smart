@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
+import HomeTemplate from 'templates/HomeTemplate'
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <main>hello wolrd</main>
-    </div>
-  )
+export default function Page() {
+  return <HomeTemplate />
 }
 
-export default Home
+export function getStaticProps() {
+  return {
+    props: {}
+  }
+}
