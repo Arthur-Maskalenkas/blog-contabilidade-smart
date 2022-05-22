@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 type IconWeight = 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone'
 
@@ -12,6 +12,7 @@ export interface IconStyle {
 
 export interface IconsList {
   closeModal: ReactNode
+  hamburuger: ReactNode
 }
 
 export interface IconProps {

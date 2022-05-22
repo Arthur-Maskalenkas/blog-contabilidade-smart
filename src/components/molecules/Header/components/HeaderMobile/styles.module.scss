@@ -1,0 +1,71 @@
+@use 'styles/main'as main;
+
+.wrapper {
+  @include main.defineFlex($justify: space-between);
+
+  @include main.media(">desktop") {
+    display: none
+  }
+}
+
+.wrapperMenuOpen {
+  @include main.defineFlex(column);
+  @include main.centerAbsolute;
+
+  z-index: main.$menu;
+  background: main.$bg-primary;
+
+  button[data-close-modal] {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  a {
+    @include main.defineFontStyles(30, main.$link-primary-color, 700, 2);
+
+    font-family: 'acme', 'Courier New', Courier, monospace;
+
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+
+    &:hover {
+      color: darken($color: main.$link-primary-color, $amount: 100%)
+    }
+  }
+}
+
+.wrapperMenuOpen.isOpen {
+  animation: ease-in main.$fast open both;
+}
+
+.wrapperMenuOpen.isOpen.menuClosing {
+  animation: ease-in-out main.$fast close both;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
