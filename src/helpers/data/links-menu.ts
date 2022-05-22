@@ -1,6 +1,6 @@
 export const listOfMenuLinks: LinkProps[] = [
-  { href: '#', text: 'Home' },
-  { href: '#', text: 'Sobre Nós' },
-  { href: '#', text: 'Planos' },
-  { href: '#', text: 'Blog' }
+  { href: '#', label: 'Home' },
+  { href: '#', label: 'Sobre Nós' },
+  { href: '#', label: 'Planos' },
+  { href: '#', label: 'Blog' }
 ]
