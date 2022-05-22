@@ -1,8 +1,15 @@
+import Header from 'components/molecules/Header'
 import type { AppProps } from 'next/app'
+import { Fragment } from 'react'
 import 'styles/global.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Fragment>
+      <Header />
+      <Component {...pageProps} />
+    </Fragment>
+  )
 }
 
 export default MyApp
