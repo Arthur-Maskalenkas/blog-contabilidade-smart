@@ -1,7 +1,27 @@
-@mixin defineFontStyles($size: 14,$color: black,$weight: 400){
+@mixin defineFontStyles($size: 14,$color: black,$weight: 400, $letterSpacing: 1, $fontFamily: 'Poppins') {
+  font-family: $fontFamily,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: #{$size}px;
   line-height: #{$size + 2}px;
+  letter-spacing: #{$letterSpacing}px;
 
   color: $color;
   font-weight: $weight;
 }
+
+@mixin defineFlex($direction: row, $justify: center, $align: center, $wrap: wrap){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin centerAbsolute($width: 100%, $height: 100%){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $width;
+  height: $height;
+}
+  

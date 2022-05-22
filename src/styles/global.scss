@@ -44,6 +44,10 @@ button {
   appearance: none;
 }
 
+input, button, a {
+  transition: 300ms all;
+}
+
 * {
   margin: 0;
   padding: 0;
