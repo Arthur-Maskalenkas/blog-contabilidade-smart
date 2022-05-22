@@ -28,7 +28,6 @@ const HeaderMobile = () => {
       </button>
       {isOpen && (
         <div
-          data-component-header-mobile
           className={`${styles.wrapperMenuOpen} ${classIsOpen} ${classIfMenuClosing}`}
         >
           <LinksMenuList />

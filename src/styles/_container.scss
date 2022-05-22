@@ -1,6 +1,7 @@
 @use 'include-media_overwrite.scss' as *;
 
 $container: 1300px;
+$container-to-remove-padding: 1330px;
 
 %container {
   max-width: $container;
@@ -9,7 +10,7 @@ $container: 1300px;
   margin-left: auto;
   margin-right: auto;
 
-  @include media("<notebook") {
+  @include media("<#{$container-to-remove-padding}") {
     padding: 0 20px;
   }
 }

@@ -1,0 +1,25 @@
+@use 'styles/main';
+
+.wrapper {
+  @extend %container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include main.media("<desktop") {
+    display: none;
+  }
+
+  a {
+    @include main.defineFontStyles($size: 16,$color: main.$link-primary-color);
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      color: darken($color: main.$link-primary-color, $amount: 10%)
+    }
+  }
+}
