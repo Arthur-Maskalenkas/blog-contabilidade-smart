@@ -1,7 +1,7 @@
 @use 'styles/main' as base;
 
 .wrapper {
-  @include base.media("<=desktop") {
+  @include base.media("<desktop") {
     [data-logo-mobile] {
       display: block;
     }
@@ -11,7 +11,7 @@
     }
   }
 
-  @include base.media(">=desktop") {
+  @include base.media(">desktop") {
     [data-logo-mobile] {
       display: none;
     }
