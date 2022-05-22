@@ -10,6 +10,6 @@
  }
 
  h2 {
-   @include base.defineFontStyles($color: base.$primary-color)
+   @include base.defineFontStyles($color: base.$text-primary-color)
  }
 }
