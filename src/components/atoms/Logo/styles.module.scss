@@ -1,0 +1,24 @@
+@use 'styles/main' as base;
+
+.wrapper {
+  @include base.media("<=desktop") {
+    [data-logo-mobile] {
+      display: block;
+    }
+
+    [data-logo-desktop] {
+      display: none;
+    }
+  }
+
+  @include base.media(">=desktop") {
+    [data-logo-mobile] {
+      display: none;
+    }
+
+    [data-logo-desktop] {
+      display: block;
+    }
+  }
+}
+
