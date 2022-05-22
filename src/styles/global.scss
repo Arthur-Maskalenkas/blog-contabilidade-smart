@@ -1,8 +1,24 @@
 @use './main.scss' as *;
 
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/fonts/acme/Acme-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html {
   font-size: 62.5%;
 } 
+
+a {
+  text-decoration: none;
+}
+
+button {
+  appearance: none;
+}
 
 * {
   margin: 0;
