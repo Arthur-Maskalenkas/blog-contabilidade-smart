@@ -1,10 +1,15 @@
-@use 'styles/main' as *;
+@use 'styles/main' as base;
 
 .wrapper {
-  @include media("<phone") {
-    display: none;
-    h2 {
-      display: none;
-    }
-  }
+  @extend %container;
+}
+
+.wrapper {
+ @include base.media("<phone") {
+  display: none;
+ }
+
+ h2 {
+   @include base.defineFontStyles($color: base.$primary-color)
+ }
 }

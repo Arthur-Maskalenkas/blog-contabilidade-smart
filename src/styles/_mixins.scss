@@ -1,0 +1,7 @@
+@mixin defineFontStyles($size: 14,$color: black,$weight: 400){
+  font-size: #{$size}px;
+  line-height: #{$size + 2}px;
+
+  color: $color;
+  font-weight: $weight;
+}
