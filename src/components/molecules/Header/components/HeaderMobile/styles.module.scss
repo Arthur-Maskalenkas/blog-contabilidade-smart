@@ -37,7 +37,7 @@
 
 
     &:hover {
-      color: darken($color: main.$link-primary-color, $amount: 100%)
+      color: main.$link-hover-primary-color
     }
   }
 }
