@@ -3,4 +3,7 @@
 
 .wrapper {
   @extend %container;
+  background-color: main.$bg-secondary;
+
+  padding-top: 1rem;
 }
