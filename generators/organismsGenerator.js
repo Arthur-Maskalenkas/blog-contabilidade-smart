@@ -18,11 +18,6 @@ module.exports = (plop) => {
         type: 'add',
         path: '../src/components/atoms/{{pascalCase name}}/styles.module.scss',
         templateFile: 'templates/styles.scss.hbs'
-      },
-      {
-        type: 'add',
-        path: '../src/components/organisms/{{pascalCase name}}/{{camelCase name}}.ts',
-        templateFile: 'templates/typings.ts.hbs'
       }
     ]
   })
