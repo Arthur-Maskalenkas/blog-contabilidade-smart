@@ -1,0 +1,19 @@
+@use 'styles/main';
+
+$bgList: 'primary' main.$bg-primary, 'secondary' main.$bg-secondary;
+$teste: 'dasdsa';
+@mixin createBackgroundVariations {
+  @each $bg in $bgList {
+    &[data-bg-#{nth($bg,1)}] {
+      background-color: nth($bg, 2);
+    }
+   }
+}
+
+.wrapper {
+  @include createBackgroundVariations;
+
+  > * {
+    @extend %container;
+  }
+}
