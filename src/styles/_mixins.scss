@@ -1,8 +1,8 @@
-@mixin defineFontStyles($size: 14,$color: black,$weight: 400, $letterSpacing: 1, $fontFamily: 'Poppins') {
+@mixin defineFontStyles($size: 1.4,$color: black,$weight: 400, $letterSpacing: .1, $fontFamily: 'Poppins') {
   font-family: $fontFamily,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: #{$size}px;
-  line-height: #{$size + 2}px;
-  letter-spacing: #{$letterSpacing}px;
+  font-size: #{$size}rem;
+  line-height: #{$size + .2}rem;
+  letter-spacing: #{$letterSpacing}rem;
 
   color: $color;
   font-weight: $weight;

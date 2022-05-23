@@ -25,7 +25,7 @@
   }
 
   a {
-    @include main.defineFontStyles(30, main.$link-primary-color, 700, 2);
+    @include main.defineFontStyles(3.0, main.$link-primary-color, 700, 2);
 
     font-family: 'acme', 'Courier New', Courier, monospace;
 

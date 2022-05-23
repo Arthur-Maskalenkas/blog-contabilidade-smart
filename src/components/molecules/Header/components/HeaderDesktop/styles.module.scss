@@ -13,7 +13,7 @@
 
   a {
     position: relative;
-    @include main.defineFontStyles($size: 18,$color: main.$link-primary-color);
+    @include main.defineFontStyles($size: 1.8,$color: main.$link-primary-color);
 
     &:not(:last-child) {
       margin-right: 2rem;
