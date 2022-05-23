@@ -4,9 +4,9 @@ import Image from 'next/image'
 const LogoMobile = () => (
   <div data-logo-mobile>
     <Image
-      width={130}
-      height={70}
-      src="https://storage.googleapis.com/jacalculei/newlayout/assets/images/jacalculei_contabilidade_online.png"
+      width={77}
+      height={20}
+      src="https://res.cloudinary.com/dezwlfeyb/image/upload/v1653302420/blog-m%C3%A3e/alume-logo-mobile_t43bo4.png"
       layout="fixed"
       alt="logo"
     />
