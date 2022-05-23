@@ -2,7 +2,8 @@
 
 
 .wrapper {
-  @extend %container;
+  @include main.definePadding;
+
   background-color: main.$bg-secondary;
 
   padding-top: 1rem;

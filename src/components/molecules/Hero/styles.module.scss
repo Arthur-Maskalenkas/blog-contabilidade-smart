@@ -1,0 +1,17 @@
+@use 'styles/main' as main;
+
+.wrapper {
+  @include main.definePadding;
+
+  background-color: main.$bg-secondary;
+
+  .imgContainer {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    max-width: 50rem;
+
+  
+  }
+}

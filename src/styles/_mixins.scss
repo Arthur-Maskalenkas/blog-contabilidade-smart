@@ -1,3 +1,5 @@
+@use 'include-media_overwrite.scss' as *;
+
 @mixin defineFontStyles($size: 1.4,$color: black,$weight: 400, $letterSpacing: .1, $fontFamily: 'Poppins') {
   font-family: $fontFamily,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: #{$size}rem;
@@ -25,3 +27,10 @@
   height: $height;
 }
   
+@mixin definePadding {
+  $container-to-remove-padding: 1330px;
+
+  @include media("<#{$container-to-remove-padding}") {
+    padding: 0 20px;
+  }
+}
