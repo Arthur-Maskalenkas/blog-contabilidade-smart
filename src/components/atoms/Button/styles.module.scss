@@ -1,0 +1,61 @@
+@use 'styles/main';
+
+@mixin buttonVariants {
+  &.primary {
+    background-color: main.$button-bg-primary-color;
+    border-radius: 2rem;
+
+    span {
+      color: main.$button-text-primary-color;
+    }
+
+    border: 1px solid main.$button-bg-hover-primary-color;
+
+    &:hover {
+      background-color: main.$button-bg-hover-primary-color;
+    }
+  } 
+}
+
+@mixin buttonOutlines {
+  &.outline.primary {
+    background-color: transparent;
+
+    span {
+      color: main.$button-bg-primary-color;
+    }
+
+    &:hover {
+      span {
+        color: main.$button-text-primary-color;
+      }
+
+      background-color: main.$button-bg-primary-color;
+    }
+  } 
+}
+
+@mixin buttonSizes {
+  &.small {
+    width: 10rem;
+  }
+
+  &.medium {
+    width: 15rem;
+  }
+
+  &.large {
+    width: 20rem;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  @include buttonVariants;
+  @include buttonSizes;
+  @include buttonOutlines;
+  height: 4.8rem;
+}
