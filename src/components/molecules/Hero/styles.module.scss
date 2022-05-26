@@ -1,7 +1,7 @@
 @use 'styles/main' as main;
 
 .wrapper {
-  @include main.definePadding;
+  @extend %containerPadding;
   background-color: main.$bg-secondary;
 
   .title {

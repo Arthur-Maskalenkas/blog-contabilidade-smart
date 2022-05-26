@@ -1,4 +1,4 @@
-@use 'include-media_overwrite.scss' as *;
+@use '../vendor/include-media_overwrite.scss' as *;
 
 @mixin defineFlex($direction: row, $justify: center, $align: center, $wrap: wrap){
   display: flex;
@@ -15,12 +15,4 @@
   transform: translate(-50%, -50%);
   width: $width;
   height: $height;
-}
-  
-@mixin definePadding {
-  $container-to-remove-padding: 1330px;
-
-  @include media("<#{$container-to-remove-padding}") {
-    padding: 0 20px;
-  }
 }
