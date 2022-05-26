@@ -12,8 +12,8 @@ const IconStylesDefault: IconStyle = {
 }
 
 const IconList: IconsList = {
-  closeModal: <X {...IconStylesDefault} size={40} />,
-  hamburuger: <List {...IconStylesDefault} size={40} />
+  closeModal: <X {...IconStylesDefault} size={30} weight="light" />,
+  hamburuger: <List {...IconStylesDefault} size={30} weight="light" />
 }
 
 const Icon = ({ icon }: IconProps) => (
