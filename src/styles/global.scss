@@ -1,50 +1,60 @@
 @use './main.scss' as *;
 
 @font-face {
-  font-family: "Acme";
-  src: url("/fonts/acme/Acme-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Acme-ExtraLight.ttf");
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Acme-Light.ttf");
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-Thin.ttf");
   font-style: normal;
   font-weight: 100;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-Regular.ttf");
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-ExtraLight.ttf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-Regular.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-Bold.ttf");
+  font-family: "ibm";
+  src: url("/fonts/ibm/IBMPlexSans-SemiBold.ttf");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
 }
 
+
+
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-Medium.ttf");
+  font-family: "Acme";
+  src: url("/fonts/acme/Acme-Regular.ttf");
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -54,6 +64,10 @@ html {
 
 a {
   text-decoration: none;
+}
+
+h1,h2,h3,h4,a,p,span {
+  @extend %fontDefault;
 }
 
 button {
