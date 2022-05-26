@@ -13,7 +13,7 @@
 
   a {
     position: relative;
-    @include main.defineFontStyles($size: 1.8,$color: main.$link-primary-color);
+    @include main.defineFontStyles($size: 1.3,$color: main.$link-primary-color);
 
     &:not(:last-child) {
       margin-right: 2rem;
@@ -30,7 +30,7 @@
       left: 0;
       width: 0;
       bottom: -2px;
-      height: 2px;
+      height: 1px;
 
       background-color: main.$link-hover-primary-color;
 
