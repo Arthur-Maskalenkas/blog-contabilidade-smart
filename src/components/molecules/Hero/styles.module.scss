@@ -2,16 +2,27 @@
 
 .wrapper {
   @include main.definePadding;
-
   background-color: main.$bg-secondary;
+
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: main.$text-primary-color;
+    letter-spacing: .4;
+
+    @include main.media(">phonemid") {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
 
   .imgContainer {
     margin-left: auto;
+
     margin-right: auto;
 
     width: 100%;
     max-width: 50rem;
-
-  
   }
 }

@@ -1,15 +1,5 @@
 @use 'include-media_overwrite.scss' as *;
 
-@mixin defineFontStyles($size: 1.4,$color: black,$weight: 400, $letterSpacing: .1, $fontFamily: 'Poppins') {
-  font-family: $fontFamily,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: #{$size}rem;
-  line-height: #{$size + .2}rem;
-  letter-spacing: #{$letterSpacing}rem;
-
-  color: $color;
-  font-weight: $weight;
-}
-
 @mixin defineFlex($direction: row, $justify: center, $align: center, $wrap: wrap){
   display: flex;
   flex-direction: $direction;

@@ -26,7 +26,11 @@
   }
 
   a {
-    @include main.defineFontStyles(2, main.$link-primary-color, 700, .2);
+    font-size: 2rem;
+    line-height: 2+.2rem;
+    font-weight: 700;
+    color: main.$link-hover-primary-color;
+    letter-spacing: .2rem;
 
     font-family: 'acme', 'Courier New', Courier, monospace;
 
@@ -42,7 +46,11 @@
     }
 
     @include main.media(">phonemid") {
-      @include main.defineFontStyles(3, main.$link-primary-color, 700, .2);
+      font-size: 3rem;
+      line-height: 3+.2rem;
+      font-weight: 700;
+      color: main.$link-hover-primary-color;
+      letter-spacing: .2rem;
     }
   }
 }
