@@ -1,4 +1,5 @@
 import Container from 'components/atoms/Container'
+import Title from 'components/atoms/Title'
 import BoxDeal from 'components/molecules/BoxDeal'
 import Hero from 'components/molecules/Hero'
 import ContainerDeals from 'components/organisms/ContainerDeals'
@@ -12,6 +13,7 @@ const HomeTemplate = () => (
     </Container>
 
     <Container background="primary">
+      <Title>Por que escolher a Alume?</Title>
       <ContainerDeals />
     </Container>
   </main>

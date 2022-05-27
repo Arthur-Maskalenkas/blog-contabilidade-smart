@@ -8,7 +8,7 @@
   gap: 5rem;
 
   @include main.media(">tablet") {
-    grid-template-columns: repeat(auto-fit,minmax(36rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
   }
 
   @include main.media("<tablet") {

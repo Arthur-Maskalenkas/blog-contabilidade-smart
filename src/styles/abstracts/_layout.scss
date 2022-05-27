@@ -1,6 +1,6 @@
 @use '../vendor/include-media_overwrite.scss' as *;
 
-$container: 1300px;
+$container: 118rem;
 
 %container {
   max-width: $container;
