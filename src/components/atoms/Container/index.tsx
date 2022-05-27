@@ -8,13 +8,13 @@ const Container = ({ children, background = 'primary' }: ContainerProps) => {
   }
 
   return (
-    <div
+    <section
       data-component-container
       className={`${styles.wrapper}`}
       {...dataNameResolved}
     >
       {children}
-    </div>
+    </section>
   )
 }
 

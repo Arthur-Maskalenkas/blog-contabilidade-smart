@@ -1,0 +1,17 @@
+@use 'styles/main';
+
+.wrapper {
+  @include main.defineFlex();
+
+  height: 7.5rem;
+  width: 7.5rem;
+
+  background-color: main.$bg-secondary-color;
+
+  transition: main.$fast all;
+
+  svg {
+    color: white;
+    transition: main.$fast all;
+  }
+}

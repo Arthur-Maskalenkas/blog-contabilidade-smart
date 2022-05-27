@@ -1,0 +1,22 @@
+@use 'styles/main';
+
+.wrapper {
+  @extend %containerPadding;
+
+  display: grid;
+
+  gap: 5rem;
+
+  @include main.media(">tablet") {
+    grid-template-columns: repeat(auto-fit,minmax(36rem,1fr));
+  }
+
+  @include main.media("<tablet") {
+    @include main.defineFlex(column);
+
+    & > * {
+      max-width: 40rem;
+    }
+  }
+  
+}

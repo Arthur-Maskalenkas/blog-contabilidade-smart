@@ -16,3 +16,37 @@
   width: $width;
   height: $height;
 }
+
+@mixin defineGridColumnsFluid($minColumns: 1, $maxColumns: 1, $maxWidthChildren: 1rem) {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(min(100%/$minColumns, max($maxWidthChildren, 100%/$maxColumns)), 1fr));
+
+  & > * {
+    width: $maxWidthChildren;
+    max-width: 100%;
+  }
+}
+
+@mixin defineGridColumnsStatic($minColumns: 1, $maxColumns: 1, $widthChildren: 1rem) {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(0, min(100%/$minColumns, max($widthChildren, 100%/$maxColumns))));
+
+  & > * {
+    width: $widthChildren;
+    max-width: 100%;
+  }
+}
+
+%border-default {
+  border: 1px solid #ececec;
+}
+
+%spaces-each-container {
+  [data-component-container] {
+    &:not(:first-child) {
+      margin-top: 13rem;
+    }
+  }
+}
