@@ -1,14 +1,14 @@
 @use 'styles/main';
 
 .wrapper {
-  @extend %containerPadding;
+  @extend %containerPaddingLeftRight;
 
   display: grid;
 
   gap: 5rem;
 
   @include main.media(">tablet") {
-    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
   @include main.media("<tablet") {
@@ -18,5 +18,5 @@
       max-width: 40rem;
     }
   }
-  
+
 }

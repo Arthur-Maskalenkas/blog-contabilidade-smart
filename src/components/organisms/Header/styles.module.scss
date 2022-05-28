@@ -1,8 +1,7 @@
 @use 'styles/main'as main;
 
-
 .wrapper {
-  @extend %containerPadding;
+  @extend %containerPaddingLeftRight;
 
   background-color: main.$bg-secondary;
 }
