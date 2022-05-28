@@ -2,16 +2,18 @@ import styles from './styles.module.scss'
 import React from 'react'
 import Button from 'components/atoms/Button'
 import Image from 'next/image'
+import Description from 'components/atoms/Description'
 
 const Hero = () => (
   <section data-component-hero={true} className={styles.wrapper}>
     <div className={styles.leftSide}>
       <h1 className={styles.title}>Contabilidade exclusiva para médicos</h1>
-      <p className={styles.description}>
+      <Description variation={'default'}>
         Abertura da PJ gratis e contabilidade mensal especializada em médicos.
         Cuidamos de tudo para você. Gaste seu tempo no que importa: seus
         pacientes e sua carreira.
-      </p>
+      </Description>
+
       <div className={styles.containerButtons}>
         <Button size="full" variant="primary">
           Quero abrir a minha conta pj
