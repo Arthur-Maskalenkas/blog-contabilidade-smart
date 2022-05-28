@@ -6,7 +6,11 @@
     border-radius: 2rem;
 
     span {
+      font-size: 1.6rem;
+      line-height: 1.6rem+.2rem;
+      font-weight: 600;
       color: main.$button-text-primary-color;
+      letter-spacing: .1rem;
     }
 
     border: 1px solid main.$button-bg-hover-primary-color;
@@ -14,7 +18,7 @@
     &:hover {
       background-color: main.$button-bg-hover-primary-color;
     }
-  } 
+  }
 }
 
 @mixin buttonOutlines {
@@ -32,30 +36,22 @@
 
       background-color: main.$button-bg-primary-color;
     }
-  } 
+  }
 }
 
-@mixin buttonSizes {
-  &.small {
-    width: 10rem;
-  }
+$buttonSizes: 'small' 10rem, 'medium' 15rem, 'large' 20rem, 'xlarge' 25rem, 'xxlarge' 30rem, 'full' 100%;
 
-  &.medium {
-    width: 15rem;
-  }
-
-  &.large {
-    width: 20rem;
-  }
-
-  &.full {
-    width: 100%;
+@mixin generateSizesVariations {
+  @each $size in $buttonSizes {
+    &.#{nth($size, 1)} {
+      width: nth($size, 2);
+    }
   }
 }
 
 .wrapper {
   @include buttonVariants;
-  @include buttonSizes;
+  @include generateSizesVariations;
   @include buttonOutlines;
   height: 4.8rem;
 }
