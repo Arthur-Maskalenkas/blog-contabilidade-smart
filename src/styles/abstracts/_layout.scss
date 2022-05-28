@@ -5,13 +5,28 @@ $container: 118rem;
 %container {
   max-width: $container;
   width: 100%;
-  
+
   margin-left: auto;
   margin-right: auto;
 }
 
-%containerPadding {
+%containerPaddingLeftRight {
   @include media("<#{$container}") {
-    padding: 0 20px;
+    padding: 0 2rem;
   }
 }
+
+%containerPaddingTopButton {
+  $padding: 4rem;
+  padding-top: $padding;
+  padding-bottom: $padding;
+
+  @include media(">desktop") {
+    $padding: 6rem;
+
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+
+}
+
