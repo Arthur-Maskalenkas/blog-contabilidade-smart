@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "npx eslint 'src/**' --fix",
     "prepare": "husky install",
     "generate:atoms": "yarn plop --plopfile ./generators/atomsGenerator.js",
     "generate:molecules": "yarn plop --plopfile ./generators/moleculesGenerator.js",

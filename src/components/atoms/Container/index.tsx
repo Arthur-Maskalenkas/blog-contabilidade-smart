@@ -9,7 +9,7 @@ const Container = ({ children, background = 'primary' }: ContainerProps) => {
 
   return (
     <section
-      data-component-container
+      data-component-container={true}
       className={`${styles.wrapper}`}
       {...dataNameResolved}
     >

@@ -12,7 +12,7 @@ export interface IconStyle {
 
 export interface IconsList {
   closeModal: ReactNode
-  hamburuger: ReactNode
+  hamburguer: ReactNode
   detective: ReactNode
   envelope: ReactNode
   database: ReactNode

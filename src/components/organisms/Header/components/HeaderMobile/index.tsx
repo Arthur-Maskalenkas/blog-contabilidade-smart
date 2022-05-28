@@ -24,7 +24,7 @@ const HeaderMobile = () => {
     <div className={styles.wrapper}>
       <Logo isMobile />
       <button onClick={() => setIsOpen(true)} aria-label="Open menu">
-        <Icon icon="hamburuger" />
+        <Icon icon="hamburguer" />
       </button>
       {isOpen && (
         <div
@@ -33,7 +33,7 @@ const HeaderMobile = () => {
           <LinksMenuList />
 
           <button
-            data-close-modal
+            data-close-modal={true}
             aria-label="Close menu"
             onClick={() => handleClick()}
           >

@@ -4,7 +4,7 @@ import Icon from 'components/atoms/Icon'
 import { DealIconProps } from './DealIcon'
 
 const DealIcon = ({ icon }: DealIconProps) => (
-  <div data-component-deal-icon className={styles.wrapper}>
+  <div data-component-deal-icon={true} className={styles.wrapper}>
     <Icon icon={icon} />
   </div>
 )

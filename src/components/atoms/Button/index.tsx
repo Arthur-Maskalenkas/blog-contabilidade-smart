@@ -14,7 +14,7 @@ const Button = ({
 
   return (
     <button
-      data-component-button
+      data-component-button={true}
       className={`${styles.wrapper} ${classNameWithVariant} ${classNameWithSize} ${classNameWithOutline}`}
     >
       <span>{children}</span>

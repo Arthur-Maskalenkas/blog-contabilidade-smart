@@ -4,11 +4,11 @@ import Button from 'components/atoms/Button'
 import Image from 'next/image'
 
 const Hero = () => (
-  <section data-component-hero className={styles.wrapper}>
+  <section data-component-hero={true} className={styles.wrapper}>
     <div className={styles.leftSide}>
       <h1 className={styles.title}>Contabilidade exclusiva para médicos</h1>
       <p className={styles.description}>
-        Abertura da PJ grátis e contabilidade mensal especializada em médicos.
+        Abertura da PJ gratis e contabilidade mensal especializada em médicos.
         Cuidamos de tudo para você. Gaste seu tempo no que importa: seus
         pacientes e sua carreira.
       </p>

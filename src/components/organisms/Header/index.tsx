@@ -4,7 +4,7 @@ import HeaderMobile from './components/HeaderMobile'
 import HeaderDesktop from './components/HeaderDesktop'
 
 const Header = () => (
-  <header data-component-header className={styles.wrapper}>
+  <header data-component-header={true} className={styles.wrapper}>
     <HeaderMobile />
     <HeaderDesktop />
   </header>

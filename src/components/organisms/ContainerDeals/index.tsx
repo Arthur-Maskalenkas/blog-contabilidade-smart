@@ -3,7 +3,7 @@ import React from 'react'
 import BoxDeal from 'components/molecules/BoxDeal'
 
 const ContainerDeals = () => (
-  <div data-component-container-deals className={styles.wrapper}>
+  <div data-component-container-deals={true} className={styles.wrapper}>
     <BoxDeal
       title="Segurança e controle"
       description="Consulte os dados da contabilidade quando e onde precisar com segurança e transparência!"
