@@ -2,19 +2,32 @@
 
 .wrapper {
   @extend %containerPadding;
+  $padding: 4rem;
 
   background-color: main.$bg-secondary;
 
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: $padding;
+  padding-bottom: $padding;
 
   @include main.media(">desktop") {
+    $padding: 6rem;
+
     display: grid;
     grid-template-columns: 45rem 1fr;
 
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: $padding;
+    padding-bottom: $padding;
   }
+
+  [data-component-description] {
+    text-align: center;
+    margin-bottom: 3.2rem;
+
+    @include main.media(">desktop") {
+      text-align: left;
+    }
+  }
+
 }
 
 .imgContainer {
@@ -30,7 +43,19 @@
   }
 }
 
+$mediasAndSizes: '>phonemid' 3.5rem 4rem, '>tablet' 4.5rem 5rem, '>desktop' 5rem 5.5rem, '>notebook' 6rem 6.5rem;
+
+@mixin generateMediaInTitle {
+  @each $media, $fontSize, $lineHeight in $mediasAndSizes {
+    @include main.media($media) {
+      font-size: $fontSize;
+      line-height: $lineHeight;
+    }
+  }
+}
+
 .title {
+  @include generateMediaInTitle;
   text-align: center;
 
   font-size: 3rem;
@@ -41,26 +66,8 @@
 
   margin-bottom: 1.6rem;
 
-  @include main.media(">phonemid") {
-    font-size: 3.5rem;
-    line-height: 4rem;
-  }
-
-  @include main.media(">tablet") {
-    font-size: 4rem;
-    line-height: 4.5rem;
-  }
-
   @include main.media(">desktop") {
     text-align: left;
-
-    font-size: 5rem;
-    line-height: 5.5rem;
-  }
-
-  @include main.media(">notebook") {
-    font-size: 6rem;
-    line-height: 6.5rem;
   }
 }
 
