@@ -1,3 +1,8 @@
+import { ReactNode } from 'react'
+
+type VariationProps = 'ourSection' | 'inSection'
+
 export interface TitleProps {
-  children: React.ReactNode
+  children: ReactNode
+  variation: VariationProps
 }

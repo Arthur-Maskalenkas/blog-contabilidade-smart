@@ -1,8 +1,27 @@
 @use 'styles/main';
 
 .wrapper {
+  &.inSection {
+    font-size: 2.5rem;
+    line-height: 2.5+.2rem;
+    font-weight: 300;
+    color: main.$text-primary-color;
+    letter-spacing: .2rem;
 
-  h1 {
+    margin-bottom: 1.6rem;
+
+    @include main.media(">phonemid") {
+      font-size: 3rem;
+      line-height: 3+.2rem;
+    }
+
+    @include main.media(">desktop") {
+      font-size: 6.4rem;
+      line-height: 6.4+.2rem;
+    }
+  }
+
+  &.ourSection {
     font-size: 4.2rem;
     line-height: 4.2+.2rem;
     font-weight: 300;
@@ -15,9 +34,8 @@
     @include main.media(">desktop") {
       font-size: 6.4rem;
       line-height: 6.4+.2rem;
-      font-weight: 300;
-      color: main.$text-primary-color;
       letter-spacing: .5rem;
     }
   }
 }
+
