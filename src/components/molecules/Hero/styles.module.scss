@@ -1,22 +1,16 @@
 @use 'styles/main' as main;
 
 .wrapper {
-  @extend %containerPadding;
-  $padding: 4rem;
+  @extend %containerPaddingLeftRight;
+  @extend %containerPaddingTopButton;
 
   background-color: main.$bg-secondary;
 
-  padding-top: $padding;
-  padding-bottom: $padding;
-
   @include main.media(">desktop") {
-    $padding: 6rem;
 
     display: grid;
     grid-template-columns: 45rem 1fr;
 
-    padding-top: $padding;
-    padding-bottom: $padding;
   }
 
   [data-component-description] {
