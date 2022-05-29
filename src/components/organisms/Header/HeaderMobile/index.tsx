@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from 'components/organisms/Header/HeaderMobile/styles.module.scss'
 import React, { useState } from 'react'
 import LinksMenuList from 'components/atoms/LinksMenuList'
 import Icon from 'components/atoms/Icon'

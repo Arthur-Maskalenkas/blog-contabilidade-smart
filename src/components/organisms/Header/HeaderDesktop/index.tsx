@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from 'components/organisms/Header/HeaderDesktop/styles.module.scss'
 import React from 'react'
 import Logo from 'components/atoms/Logo'
 import { listOfMenuLinks } from 'helpers/data/links-menu'
