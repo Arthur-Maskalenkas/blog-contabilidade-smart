@@ -5,7 +5,7 @@ import Title from 'components/atoms/Title'
 
 const Deals = () => (
   <>
-    <Title variation={'ourSection'}>Por que escolher a Alume?</Title>
+    <Title>Por que escolher a Alume?</Title>
 
     <div className={styles.dealsWrapper}>
       <BoxDeal

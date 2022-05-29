@@ -17,7 +17,7 @@ const OurPlans = () => (
     </div>
 
     <div className={styles.textContainer}>
-      <Title variation="inSection">Nosso plano de assessoria mensal</Title>
+      <Title variant="inSection">Nosso plano de assessoria mensal</Title>
 
       <div className={styles.descriptionContainer}>
         <p>
