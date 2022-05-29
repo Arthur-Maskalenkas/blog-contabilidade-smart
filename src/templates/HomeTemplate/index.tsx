@@ -4,6 +4,7 @@ import Deals from 'sections/Deals'
 import React from 'react'
 import style from './styles.module.scss'
 import OurPlans from 'sections/OurPlans'
+import Recommendations from 'sections/Recommendations'
 
 const HomeTemplate = () => (
   <main data-component-home-template={true} className={style.wrapper}>
@@ -17,6 +18,10 @@ const HomeTemplate = () => (
 
     <Container variant="secondary">
       <OurPlans />
+    </Container>
+
+    <Container>
+      <Recommendations />
     </Container>
   </main>
 )

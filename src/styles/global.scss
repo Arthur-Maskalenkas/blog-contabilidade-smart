@@ -2,19 +2,19 @@
 
 html {
   font-size: 62.5%;
-} 
+}
 
 a {
   text-decoration: none;
 }
 
-h1,h2,h3,h4,a,p,span {
+h1, h2, h3, h4, a, p, span, cite {
   @extend %fontDefault;
 }
 
 button {
   appearance: none;
-  background-color:  transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -30,6 +30,7 @@ input, button, a {
   border: unset;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   &::before,
   &::after {
     box-sizing: inherit;
