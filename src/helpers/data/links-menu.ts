@@ -1,3 +1,5 @@
+import { LinkProps } from 'typings/global'
+
 export const listOfMenuLinks: LinkProps[] = [
   { href: '#', label: 'Home' },
   { href: '#', label: 'Sobre Nós' },
