@@ -1,14 +1,19 @@
 import styles from './styles.module.scss'
 import React from 'react'
 import Logo from 'components/atoms/Logo'
-import LinksMenuList from 'components/atoms/LinksMenuList'
+import { listOfMenuLinks } from 'helpers/data/links-menu'
+import Links from 'components/atoms/Links'
 
 const HeaderDesktop = () => (
   <div className={styles.wrapper}>
     <Logo isMobile={false} />
 
     <nav>
-      <LinksMenuList />
+      {listOfMenuLinks.map((link, index) => (
+        <Links href={link.href} key={index} variant="header-desktop">
+          {link.label}
+        </Links>
+      ))}
     </nav>
   </div>
 )
