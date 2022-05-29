@@ -1,18 +1,74 @@
 @use 'styles/main';
 
-.wrapper {
+$container-height: 9.2rem;
+
+.menuWrapper {
   &.menuScrolling {
     background-color: white;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: main.$alwaysOnTop;
+    box-shadow: 0 0 8px rgb(0 0 0 / 16%);;
+
+    animation-name: bounceInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  &.menuScrolling.menuPositionMiddle.menuWasScrolled {
+    animation-name: bounceOutUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    transform: none;
   }
 }
 
 .contentWrapper {
   @extend %container;
 
-  padding-top: 1.5rem;
+  height: $container-height;
 
   display: flex;
   align-items: center;
@@ -21,4 +77,8 @@
   @include main.media("<desktop") {
     display: none;
   }
+}
+
+.containerToNotAffectScroll {
+  height: $container-height;
 }
