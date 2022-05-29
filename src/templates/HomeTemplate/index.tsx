@@ -1,7 +1,6 @@
 import Container from 'components/atoms/Container'
-import Title from 'components/atoms/Title'
 import Hero from 'sections/Hero'
-import ContainerDeals from 'sections/Deals'
+import Deals from 'sections/Deals'
 import React from 'react'
 import style from './styles.module.scss'
 import OurPlans from 'sections/OurPlans'
@@ -13,8 +12,7 @@ const HomeTemplate = () => (
     </Container>
 
     <Container background={'primary'}>
-      <Title variation={'ourSection'}>Por que escolher a Alume?</Title>
-      <ContainerDeals />
+      <Deals />
     </Container>
 
     <Container background={'secondary'}>
