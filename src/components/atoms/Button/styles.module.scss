@@ -6,11 +6,16 @@
     border-radius: 2rem;
 
     span {
-      font-size: 1.6rem;
-      line-height: 1.6rem+.2rem;
+      font-size: 1.25rem;
+      line-height: 1.25rem+.2rem;
       font-weight: 600;
       color: main.$button-text-primary-color;
-      letter-spacing: .1rem;
+      letter-spacing: .14rem;
+
+      @include main.media(">phonemid") {
+        font-size: 1.5rem;
+        line-height: 1.5rem+.2rem;
+      }
     }
 
     border: 1px solid main.$button-bg-hover-primary-color;
@@ -53,5 +58,13 @@ $buttonSizes: 'small' 10rem, 'medium' 15rem, 'large' 20rem, 'xlarge' 25rem, 'xxl
   @include defineVariants;
   @include generateSizesVariations;
   @include buttonOutlines;
+
+  @include main.media("<300px") {
+
+    &.wrapper {
+      width: 100%;
+    }
+  }
+
   height: 4.8rem;
 }
