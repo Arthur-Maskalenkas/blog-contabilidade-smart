@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from 'sections/OurPlans/styles.module.scss'
 import React from 'react'
 import Title from 'components/atoms/Title'
 import Image from 'next/image'

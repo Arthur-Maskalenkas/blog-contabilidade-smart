@@ -1,10 +1,10 @@
 import Container from 'components/atoms/Container'
 import Title from 'components/atoms/Title'
-import Hero from 'components/molecules/Hero'
-import ContainerDeals from 'components/organisms/ContainerDeals'
+import Hero from 'sections/Hero'
+import ContainerDeals from 'sections/Deals'
 import React from 'react'
 import style from './styles.module.scss'
-import OurPlans from 'components/molecules/OurPlans'
+import OurPlans from 'sections/OurPlans'
 
 const HomeTemplate = () => (
   <main data-component-home-template={true} className={style.wrapper}>

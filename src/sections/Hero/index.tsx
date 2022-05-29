@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from 'sections/Hero/styles.module.scss'
 import React from 'react'
 import Button from 'components/atoms/Button'
 import Image from 'next/image'

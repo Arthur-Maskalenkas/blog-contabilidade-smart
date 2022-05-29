@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from 'sections/Deals/styles.module.scss'
 import React from 'react'
 import BoxDeal from 'components/molecules/BoxDeal'
 
