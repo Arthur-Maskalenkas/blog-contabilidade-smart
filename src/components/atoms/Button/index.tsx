@@ -8,14 +8,17 @@ const Button = ({
   size = 'default',
   outline = false
 }: ButtonProps) => {
-  const classNameWithVariant = `${styles[variant]}`
+  const dataNameWithVariant = {
+    [`data-variant-${variant}`]: true
+  }
   const classNameWithSize = `${styles[size]}`
   const classNameWithOutline = `${styles[outline ? 'outline' : 'default']}`
 
   return (
     <button
       data-component-button={true}
-      className={`${styles.wrapper} ${classNameWithVariant} ${classNameWithSize} ${classNameWithOutline}`}
+      {...dataNameWithVariant}
+      className={`${styles.wrapper} ${classNameWithSize} ${classNameWithOutline}`}
     >
       <span>{children}</span>
     </button>

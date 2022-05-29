@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
-type VariantsButton = 'primary' | 'default'
+export type ButtonVariants = 'default' | 'primary'
+
 type SizeButton =
   | 'small'
   | 'medium'
@@ -12,7 +13,7 @@ type SizeButton =
 
 export interface ButtonProps {
   children: ReactNode
-  variant?: VariantsButton
+  variant?: ButtonVariants
   size?: SizeButton
   outline?: boolean
 }

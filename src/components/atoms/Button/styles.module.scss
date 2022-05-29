@@ -1,7 +1,7 @@
 @use 'styles/main';
 
-@mixin buttonVariants {
-  &.primary {
+@mixin defineVariants {
+  &[data-variant-primary] {
     background-color: main.$button-bg-primary-color;
     border-radius: 2rem;
 
@@ -22,7 +22,7 @@
 }
 
 @mixin buttonOutlines {
-  &.outline.primary {
+  &.outline[data-variant-primary] {
     background-color: transparent;
 
     span {
@@ -50,7 +50,7 @@ $buttonSizes: 'small' 10rem, 'medium' 15rem, 'large' 20rem, 'xlarge' 25rem, 'xxl
 }
 
 .wrapper {
-  @include buttonVariants;
+  @include defineVariants;
   @include generateSizesVariations;
   @include buttonOutlines;
   height: 4.8rem;
