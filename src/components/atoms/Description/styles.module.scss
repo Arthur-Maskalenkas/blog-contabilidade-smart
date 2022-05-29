@@ -1,0 +1,13 @@
+@use 'styles/main';
+
+.wrapper {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: main.$text-primary-color;
+  letter-spacing: .1rem;
+
+  @include main.media(">desktop") {
+    font-size: 1.8rem;
+  }
+}
