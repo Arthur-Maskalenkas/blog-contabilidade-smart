@@ -11,9 +11,10 @@ $container: 118rem;
 }
 
 %containerPaddingLeftRight {
-  @include media("<#{$container}") {
+  @include media("<notebook") {
     padding: 0 2rem;
   }
+
 }
 
 %containerPaddingTopButton {
