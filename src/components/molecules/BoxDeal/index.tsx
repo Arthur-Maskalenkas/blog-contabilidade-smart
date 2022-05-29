@@ -1,11 +1,11 @@
 import styles from 'components/molecules/BoxDeal/styles.module.scss'
 import React from 'react'
-import DealIcon from 'components/molecules/BoxDeal/components/DealIcon'
 import { BoxDealProps } from 'components/molecules/BoxDeal/Boxdeal'
+import Icon from 'components/atoms/Icon'
 
 const BoxDeal = ({ description, icon, title }: BoxDealProps) => (
   <article data-component-box-deal={true} className={styles.wrapper}>
-    <DealIcon icon={icon} />
+    <Icon icon={icon} variant="deals" />
 
     <h3>{title}</h3>
 

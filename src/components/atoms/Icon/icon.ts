@@ -18,6 +18,9 @@ export interface IconsList {
   database: ReactNode
 }
 
+export type IconVariants = 'default' | 'deals'
+
 export interface IconProps {
   icon: keyof IconsList
+  variant?: IconVariants
 }
