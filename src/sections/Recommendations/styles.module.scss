@@ -1,0 +1,12 @@
+@use 'styles/main';
+
+.wrapper {
+  @extend %containerPaddingLeftRight;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 37rem));
+  gap: 3rem;
+  justify-content: center;
+
+}
