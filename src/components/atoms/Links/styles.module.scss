@@ -1,6 +1,34 @@
 @use 'styles/main';
 
 @mixin defineVariants {
+  &[data-variant-menu-mobile] {
+    font-size: 2rem;
+    line-height: 2+.2rem;
+    font-weight: 700;
+    color: main.$link-hover-primary-color;
+    letter-spacing: .2rem;
+
+    font-family: 'acme', 'Courier New', Courier, monospace;
+
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      color: main.$link-hover-primary-color
+    }
+
+    @include main.media(">phonemid") {
+      font-size: 3rem;
+      line-height: 3+.2rem;
+      font-weight: 700;
+      color: main.$link-hover-primary-color;
+      letter-spacing: .2rem;
+    }
+  }
+
   &[data-variant-header-desktop] {
     position: relative;
 
