@@ -1,7 +1,25 @@
 @use 'styles/main';
 
-.wrapper {
-  &.inSection {
+@mixin defineVariants {
+  &[data-variant-default] {
+    font-size: 4.2rem;
+    line-height: 4.2+.2rem;
+    font-weight: 300;
+    color: main.$title-primary-color;
+    letter-spacing: .2rem;
+
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @include main.media(">desktop") {
+      font-size: 6.4rem;
+      line-height: 6.4+.2rem;
+      letter-spacing: .5rem;
+    }
+  }
+
+  &[data-variant-inSection] {
+
     font-size: 2.5rem;
     line-height: 2.5+.2rem;
     font-weight: 300;
@@ -20,22 +38,9 @@
       line-height: 5.5+.2rem;
     }
   }
+}
 
-  &.ourSection {
-    font-size: 4.2rem;
-    line-height: 4.2+.2rem;
-    font-weight: 300;
-    color: main.$title-primary-color;
-    letter-spacing: .2rem;
-
-    margin-bottom: 5rem;
-    text-align: center;
-
-    @include main.media(">desktop") {
-      font-size: 6.4rem;
-      line-height: 6.4+.2rem;
-      letter-spacing: .5rem;
-    }
-  }
+.wrapper {
+  @include defineVariants
 }
 

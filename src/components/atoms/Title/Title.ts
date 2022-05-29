@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
-type VariationProps = 'ourSection' | 'inSection'
+export type TitleVariants = 'default' | 'inSection'
 
 export interface TitleProps {
   children: ReactNode
-  variation: VariationProps
+  variant?: TitleVariants
 }

@@ -2,13 +2,16 @@ import styles from './styles.module.scss'
 import React from 'react'
 import { TitleProps } from './Title'
 
-const Title = ({ children, variation = 'inSection' }: TitleProps) => {
-  const classNameWithVariation = `${styles[variation]}`
+const Title = ({ children, variant = 'default' }: TitleProps) => {
+  const dataNameWithVariant = {
+    [`data-variant-${variant}`]: true
+  }
 
   return (
     <h1
       data-component-title={true}
-      className={`${styles.wrapper} ${classNameWithVariation}`}
+      {...dataNameWithVariant}
+      className={styles.wrapper}
     >
       {children}
     </h1>
