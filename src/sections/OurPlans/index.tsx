@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Button from 'components/atoms/Button'
 
 const OurPlans = () => (
-  <section data-component-our-plans={true} className={styles.wrapper}>
+  <div data-component-our-plans={true} className={styles.wrapper}>
     <div className={styles.imgContainer}>
       <Image
         src="https://alume.com/wp-content/uploads/2022/04/imagem-assessoria.png"
@@ -37,7 +37,7 @@ const OurPlans = () => (
         Quero abrir minha PJ
       </Button>
     </div>
-  </section>
+  </div>
 )
 
 export default OurPlans

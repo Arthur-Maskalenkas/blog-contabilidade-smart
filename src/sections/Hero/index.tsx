@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Description from 'components/atoms/Description'
 
 const Hero = () => (
-  <section data-component-hero={true} className={styles.wrapper}>
+  <div data-component-hero={true} className={styles.wrapper}>
     <div className={styles.leftSide}>
       <h1 className={styles.title}>Contabilidade exclusiva para médicos</h1>
       <Description variation={'default'}>
@@ -33,7 +33,7 @@ const Hero = () => (
         height="100%"
       />
     </div>
-  </section>
+  </div>
 )
 
 export default Hero
