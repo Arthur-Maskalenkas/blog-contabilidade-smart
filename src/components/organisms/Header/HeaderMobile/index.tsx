@@ -1,8 +1,9 @@
 import styles from 'components/organisms/Header/HeaderMobile/styles.module.scss'
 import React, { useState } from 'react'
-import LinksMenuList from 'components/atoms/LinksMenuList'
 import Icon from 'components/atoms/Icon'
 import Logo from 'components/atoms/Logo'
+import { listOfMenuLinks } from 'helpers/data/links-menu'
+import Links from 'components/atoms/Links'
 
 const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -27,11 +28,14 @@ const HeaderMobile = () => {
         <Icon icon="hamburguer" />
       </button>
       {isOpen && (
-        <div
+        <nav
           className={`${styles.wrapperMenuOpen} ${classIsOpen} ${classIfMenuClosing}`}
         >
-          <LinksMenuList />
-
+          {listOfMenuLinks.map((link, index) => (
+            <Links href={link.href} key={index} variant="menu-mobile">
+              {link.label}
+            </Links>
+          ))}
           <button
             data-close-modal={true}
             aria-label="Close menu"
@@ -39,7 +43,7 @@ const HeaderMobile = () => {
           >
             <Icon icon="closeModal" />
           </button>
-        </div>
+        </nav>
       )}
     </div>
   )
