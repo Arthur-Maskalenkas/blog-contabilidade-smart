@@ -1,4 +1,4 @@
-@use '../../../../../styles/main';
+@use 'styles/main';
 
 .wrapper {
   @include main.defineFlex();
