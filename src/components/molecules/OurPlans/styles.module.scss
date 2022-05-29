@@ -43,7 +43,7 @@
     }
 
     .textContainer {
-      @include main.defineFlex(column, $align: start);
+      @include main.defineFlex($direction: column, $align: flex-start);
     }
 
   }
