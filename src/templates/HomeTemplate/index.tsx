@@ -7,15 +7,15 @@ import OurPlans from 'sections/OurPlans'
 
 const HomeTemplate = () => (
   <main data-component-home-template={true} className={style.wrapper}>
-    <Container background={'secondary'}>
+    <Container variant="secondary">
       <Hero />
     </Container>
 
-    <Container background={'primary'}>
+    <Container>
       <Deals />
     </Container>
 
-    <Container background={'secondary'}>
+    <Container variant="secondary">
       <OurPlans />
     </Container>
   </main>

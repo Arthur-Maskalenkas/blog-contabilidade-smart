@@ -1,17 +1,17 @@
 @use 'styles/main';
 
-$bgList: 'primary' main.$bg-primary, 'secondary' main.$bg-secondary;
+@mixin defineVariants {
+  &[data-variant-default] {
+    background-color: main.$bg-primary;
+  }
 
-@mixin createBackgroundVariations {
-  @each $bg in $bgList {
-    &[data-bg-#{nth($bg,1)}] {
-      background-color: nth($bg, 2);
-    }
-   }
+  &[data-variant-secondary] {
+    background-color: main.$bg-secondary;
+  }
 }
 
 .wrapper {
-  @include createBackgroundVariations;
+  @include defineVariants;
 
   > * {
     @extend %container;

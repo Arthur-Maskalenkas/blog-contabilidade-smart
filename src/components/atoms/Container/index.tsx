@@ -2,16 +2,16 @@ import styles from './styles.module.scss'
 import React from 'react'
 import { ContainerProps } from './Container'
 
-const Container = ({ children, background = 'primary' }: ContainerProps) => {
-  const dataNameResolved = {
-    [`data-bg-${background}`]: true
+const Container = ({ children, variant }: ContainerProps) => {
+  const dataNameWithVariant = {
+    [`data-variant-${variant}`]: true
   }
 
   return (
     <section
       data-component-container={true}
       className={`${styles.wrapper}`}
-      {...dataNameResolved}
+      {...dataNameWithVariant}
     >
       {children}
     </section>
