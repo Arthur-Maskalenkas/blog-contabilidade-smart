@@ -2,51 +2,25 @@
 
 $container-height: 9.2rem;
 
-.menuWrapper {
-  &.menuScrolling {
-    background-color: white;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: main.$alwaysOnTop;
-    box-shadow: 0 0 8px rgb(0 0 0 / 16%);;
+@mixin defineStylesBasedOnStates {
+  .menuWrapper.menuScrolling {
+    @include main.designOfHeadersWhenScrollAppear;
+  }
 
-    animation-name: bounceInDown;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+  .containerToNotAffectScroll {
+    @include main.media(">desktop") {
+      height: $container-height;
+    }
   }
 }
 
-@keyframes bounceInDown {
-  0%, 60%, 75%, 90%, 100% {
-    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -3000px, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(0, 25px, 0);
-  }
-
-  75% {
-    transform: translate3d(0, -10px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, 5px, 0);
-  }
-
-  100% {
-    transform: none;
-  }
+.wrapper {
+  @include defineStylesBasedOnStates;
 }
 
 .contentWrapper {
   @extend %container;
+  @extend %containerPaddingLeftRight;
 
   height: $container-height;
 
@@ -56,11 +30,5 @@ $container-height: 9.2rem;
 
   @include main.media("<desktop") {
     display: none;
-  }
-}
-
-.containerToNotAffectScroll {
-  @include main.media(">desktop") {
-    height: $container-height;
   }
 }

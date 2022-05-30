@@ -1,0 +1,28 @@
+@use 'styles/main';
+
+.wrapperMenuOpen {
+
+  @include main.defineFlex(column);
+  @include main.centerAbsolute;
+  position: fixed;
+
+  z-index: main.$menu-mobile;
+  background: main.$bg-primary;
+
+  button[data-close-modal] {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+.wrapperMenuOpen.isOpen {
+  animation: ease-in main.$fast open both;
+}
+
+.wrapperMenuOpen.isOpen.menuClosing {
+  animation: ease-in-out main.$fast close both;
+}

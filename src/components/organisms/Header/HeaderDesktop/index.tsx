@@ -1,29 +1,11 @@
 import styles from 'components/organisms/Header/HeaderDesktop/styles.module.scss'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Logo from 'components/atoms/Logo'
 import { listOfMenuLinks } from 'helpers/data/links-menu'
 import Links from 'components/atoms/Links'
+import { HeaderProps } from 'components/organisms/Header/Header'
 
-const HeaderDesktop = () => {
-  const [menuScrolling, setMenuScrolling] = useState<boolean>(false)
-
-  const distanceToMenuScrollAppear = 20
-
-  const changeMenuAppearance = () => {
-    if (window.scrollY > distanceToMenuScrollAppear) {
-      setMenuScrolling(true)
-      return
-    }
-
-    setMenuScrolling(false)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeMenuAppearance)
-
-    return () => window.removeEventListener('scroll', changeMenuAppearance)
-  }, [])
-
+const HeaderDesktop = ({ menuScrolling }: HeaderProps) => {
   const classNameIfMenuScrolling = menuScrolling ? styles.menuScrolling : ''
 
   return (
