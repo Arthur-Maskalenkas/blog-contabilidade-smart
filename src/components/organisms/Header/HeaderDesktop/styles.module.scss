@@ -15,26 +15,6 @@ $container-height: 9.2rem;
     animation-duration: 1s;
     animation-fill-mode: both;
   }
-
-  &.menuScrolling.menuPositionMiddle.menuWasScrolled {
-    animation-name: bounceOutUp;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-}
-
-@keyframes bounceOutUp {
-  20% {
-    transform: translate3d(0, -10px, 0);
-  }
-  40%, 45% {
-    opacity: 1;
-    transform: translate3d(0, 20px, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(0, -2000px, 0);
-  }
 }
 
 @keyframes bounceInDown {
@@ -80,5 +60,7 @@ $container-height: 9.2rem;
 }
 
 .containerToNotAffectScroll {
-  height: $container-height;
+  @include main.media(">desktop") {
+    height: $container-height;
+  }
 }

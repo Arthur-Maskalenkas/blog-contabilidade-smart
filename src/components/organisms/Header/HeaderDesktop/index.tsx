@@ -4,41 +4,18 @@ import Logo from 'components/atoms/Logo'
 import { listOfMenuLinks } from 'helpers/data/links-menu'
 import Links from 'components/atoms/Links'
 
-interface menuScrolling {
-  isScrolling: boolean
-  wasScrolled: boolean
-  position: number
-}
-
 const HeaderDesktop = () => {
-  const distanceToMenuScrollWork = 200
-  const distanceToMenuScrollAppear = 900
+  const [menuScrolling, setMenuScrolling] = useState<boolean>(false)
 
-  const [menuScrolling, setMenuScrolling] = useState<menuScrolling>({
-    isScrolling: false,
-    position: 0,
-    wasScrolled: false
-  })
+  const distanceToMenuScrollAppear = 20
 
   const changeMenuAppearance = () => {
     if (window.scrollY > distanceToMenuScrollAppear) {
-      setMenuScrolling((prevState) => ({
-        ...prevState,
-        isScrolling: true,
-        wasScrolled: true
-      }))
-    }
-
-    if (window.scrollY > distanceToMenuScrollWork) {
-      setMenuScrolling((prevState) => ({
-        ...prevState,
-        position: window.scrollY
-      }))
-
+      setMenuScrolling(true)
       return
     }
 
-    setMenuScrolling((v) => ({ ...v, isScrolling: false, wasScrolled: false }))
+    setMenuScrolling(false)
   }
 
   useEffect(() => {
@@ -47,27 +24,12 @@ const HeaderDesktop = () => {
     return () => window.removeEventListener('scroll', changeMenuAppearance)
   }, [])
 
-  const classNameIfMenuScrolling = menuScrolling.isScrolling
-    ? styles.menuScrolling
-    : ''
-
-  const classNameIfMenuWasScrolled = menuScrolling.wasScrolled
-    ? styles.menuWasScrolled
-    : ''
-
-  const classNameWithPosition =
-    menuScrolling.position > distanceToMenuScrollAppear
-      ? styles.menuPositionDown
-      : styles.menuPositionMiddle
+  const classNameIfMenuScrolling = menuScrolling ? styles.menuScrolling : ''
 
   return (
     <div className={styles.wrapper}>
-      {menuScrolling.isScrolling && (
-        <div className={styles.containerToNotAffectScroll} />
-      )}
-      <div
-        className={`${styles.menuWrapper} ${classNameIfMenuScrolling} ${classNameWithPosition} ${classNameIfMenuWasScrolled}`}
-      >
+      {menuScrolling && <div className={styles.containerToNotAffectScroll} />}
+      <div className={`${styles.menuWrapper} ${classNameIfMenuScrolling} `}>
         <div className={`${styles.contentWrapper}`}>
           <Logo isMobile={false} />
 
